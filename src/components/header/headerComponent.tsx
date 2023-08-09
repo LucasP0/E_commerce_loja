@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png';
 export const HeaderComponent = () => {
   return (
     <div className="Container p-6 flex flex-row items-center">
-      <div className="Logo flex flex-row flex-1 items-end gap-2">
+      <div className="Logo flex flex-row flex-1 items-center gap-2">
         <img
           className='w-10 h-10'
           src={logo} alt="" />
