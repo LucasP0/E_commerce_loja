@@ -3,13 +3,12 @@ import HeroImg from '../../assets/hero.png'
 
 export const HeroComponent = () => {
   return (
-    <div className=" grid grid-cols-ih p-6 ">
-
+    <div className=" grid grid-cols-ih px-6 bg-black/50 ">
       {/* Left side */}
       <div className="grid grid-rows-burro ">
-        <span className=" text-2xl w-min block font-semibold">Protetor de Pele</span>
+        <span className=" text-[1.8rem] w-min block font-semibold">Protetor de Pele</span>
         <div className="flex flex-col w-min text-black">
-          <span className="font-extrabold text-[2rem]">Trendy da Moda</span>
+          <span className="font-extrabold text-[1.8rem]">Trendy da Moda</span>
           <span>Coleção da moda atualmente é a infanto juvenil</span>
         </div>
       </div>
@@ -36,11 +35,11 @@ export const HeroComponent = () => {
       {/* Right side */}
       <div className="grid grid-flow-row grid-cols-1  ">
         <div className="flex flex-col text-right">
-          <span className="font-extrabold text-[2rem]">1.5m</span>
+          <span className="font-extrabold text-[1.8rem]">1.5m</span>
           <span>Tráfego mensal</span>
         </div>
-        <div className="flex flex-col text-center">
-          <span>100k</span>
+        <div className="flex flex-col text-right">
+          <span className="font-extrabold text-[1.8rem]">100k</span>
           <span>Clientes Felizes</span>
         </div>
       </div>
