@@ -3,7 +3,7 @@ import HeroImg from '../../assets/hero.png'
 
 export const HeroComponent = () => {
   return (
-    <div className=" grid grid-cols-ih px-6 bg-black/50 ">
+    <div className=" grid grid-cols-ih px-6">
       {/* Left side */}
       <div className="grid grid-rows-burro ">
         <span className=" text-[1.8rem] w-min block font-semibold">Protetor de Pele</span>
@@ -15,7 +15,7 @@ export const HeroComponent = () => {
 
       {/* Middle side hero image */}
       <div className="wrapper flex  items-baseline justify-center relative   ">
-        <div className="blueCircle"></div>
+        <div className="w-[30rem] h-[30rem] rounded-[50%] z-10 absolute bottom-0 "></div>
           <img 
             className="w-[25rem]
             absolute top-14 " 
