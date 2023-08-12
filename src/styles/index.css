@@ -16,7 +16,8 @@ body {
 @media screen and (max-width: 800px) {
   body 
   {
-    width: 667px;
+    width: 100%;
   }
 }
+
 
