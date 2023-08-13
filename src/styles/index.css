@@ -20,4 +20,19 @@ body {
   }
 }
 
+.s-container .Swiper {
+  position: unset;
+}
+
+.s-container .swiper-button-prev {
+  left: 0%;
+}
+
+.s-container .swiper-button-next{
+  right: 0%;
+}
+
+.s-container .swiper-button-prev, .s-container .swiper-button-next {
+  color: black;
+}
 
