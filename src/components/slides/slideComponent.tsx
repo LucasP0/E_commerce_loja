@@ -11,7 +11,7 @@ import { Pagination, Navigation  } from "swiper/modules";
 
 export const SlideComponent = () => {
   return (
-    <div className="s-container relative h-screen">
+    <div className="s-container relative">
       <Swiper
         modules={[Pagination, Navigation]}
         loopFillGroupWithBlank={true}
