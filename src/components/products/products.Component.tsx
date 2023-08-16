@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import Plane from '../../assets/plane.png'
+import { ProductsData } from '../../data/products';
 
-export const ProductsComponent = () => {  
+export const ProductsComponent = () => { 
+  const [menuData, SetMenuData] = useState(ProductsData); 
   return (
     <div className='container '>
       <img src={Plane} alt="" />
@@ -8,11 +11,20 @@ export const ProductsComponent = () => {
 
       <div className='products'>
         <ul className='menu'>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>All</li>
+          <li>Skin Care</li>
+          <li>Condicionadores</li>
+          <li>Marcas</li>
         </ul>
+        <div className='list'>
+          {
+            menuData.map((product, i) => (
+              <div className='product'>
+                
+              </div>
+            ))
+          }
+        </div>
       </div>
     </div>
 
