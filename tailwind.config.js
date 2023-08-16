@@ -11,6 +11,7 @@ export default {
       },
       gridTemplateColumns: {
         'ih': '1fr 3fr 1fr',
+        '2h': '25% auto',
         
       },
       gridTemplateRows: {
