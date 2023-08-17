@@ -3,6 +3,7 @@ import { Hero } from "./components/hero/hero"
 import { Slide } from "./components/slides/slide"
 import { VirtualComponent } from "./components/virtual/virtualComponent"
 import { Products } from "./components/products/products"
+import { Ava } from "./components/avaliacoes/ava"
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
       <Slide />
       <VirtualComponent />  
       <Products />
+      <Ava />
     </>
     
   )

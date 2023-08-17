@@ -1,9 +1,14 @@
 import { useState } from 'react'
 import Plane from '../../assets/plane.png'
 import { ProductsData } from '../../data/products';
-import { ProductMap } from './productsmapComponent';
+import { ProductMap } from './productsMapComponent';
+import { useAutoAnimate } from '@formkit/auto-animate/react'
+
 
 export const ProductsComponent = () => {
+  // FAZER ANIMAÇÃO
+  const [parent] = useAutoAnimate()
+
   const [menuData, SetMenuData] = useState(ProductsData);
   // // BlogFetch.get('/products').then(({data}) => {
   //   SetMenuData(data);
@@ -36,7 +41,7 @@ export const ProductsComponent = () => {
             Foundations
           </li>
         </ul>
-        <div className='grid grid-cols-rep h-[25rem] overflow-scroll gap-y-2 '>
+        <div className='grid grid-cols-rep h-[25rem] overflow-scroll gap-y-2'ref={parent}>
           {
             menuData.map((product, i) => (
               <ProductMap data={product} />
