@@ -95,7 +95,7 @@ export const ProductsData = [{
 },
 {
     name: "CONDITIONER",
-    details: 'Best Conditioner',
+    detail: 'Best Conditioner',
     price: '30',
     img: img7,
     type: 'conditioner'
@@ -103,49 +103,49 @@ export const ProductsData = [{
 ,
 {
     name: "CONDITIONER",
-    details: 'Best Conditioner',
+    detail: 'Best Conditioner',
     price: '30',
     img: img8,
     type: 'conditioner'
 },
 {
     name: "CONDITIONER",
-    details: 'Best Conditioner',
+    detail: 'Best Conditioner',
     price: '30',
     img: img9,
     type: 'conditioner'
 },
 {
     name: "CONDITIONER",
-    details: 'Best Conditioner',
+    detail: 'Best Conditioner',
     price: '30',
     img: img10,
     type: 'conditioner'
 },
 {
     name: "FOUNDATION",
-    details: 'Nourish your skin',
+    detail: 'Nourish your skin',
     price: '12',
     img: img11,
     type: 'foundation'
 },
 {
     name: "FOUNDATION",
-    details: 'Nourish your skin',
+    detail: 'Nourish your skin',
     price: '12',
     img: img12,
     type: 'foundation'
 },
 {
     name: "FOUNDATION",
-    details: 'Nourish your skin',
+    detail: 'Nourish your skin',
     price: '12',
     img: img13,
     type: 'foundation'
 },
 {
     name: "FOUNDATION",
-    details: 'Nourish your skin',
+    detail: 'Nourish your skin',
     price: '12',
     img: img14,
     type: 'foundation'
