@@ -24,7 +24,7 @@ export const ProductsComponent = () => {
         alt="ImgHeart"
         className='absolute w-32 left-[32%] top-[-3rem]'
       />
-      <h1>Seus futuros Produtos</h1>
+      <h1 className='text-[1.8rem] font-extrabold mb-10'>Seus futuros Produtos</h1>
 
       <div className='grid w-[90%] grid-cols-2h'>
         <ul className='menu flex flex-col gap-4 font-medium text-[1.3rem]'>

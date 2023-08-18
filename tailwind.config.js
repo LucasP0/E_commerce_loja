@@ -10,6 +10,7 @@ export default {
         'ok': ['Poppins', 'sans-serif'],
       },
       gridTemplateColumns: {
+        'h' : '1fr 2fr 1fr',
         'ih': '1fr 3fr 1fr',
         '2h': '25% auto',
         'rep': 'repeat(auto-fill, minmax(200px, 1fr))',
