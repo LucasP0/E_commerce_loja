@@ -4,6 +4,7 @@ import { Slide } from "./components/slides/slide"
 import { VirtualComponent } from "./components/virtual/virtualComponent"
 import { Products } from "./components/products/products"
 import { Ava } from "./components/avaliacoes/ava"
+import { Footer } from "./components/footer/footer"
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
       <VirtualComponent />  
       <Products />
       <Ava />
+      <Footer />
     </>
     
   )
