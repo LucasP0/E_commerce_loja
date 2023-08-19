@@ -11,7 +11,6 @@ body {
   trasition: all 3ms ease;
   color: #343434;
   scroll-behavior: smooth;
-
 }
 @media screen and (max-width: 800px) {
   body 
@@ -35,4 +34,5 @@ body {
 .s-container .swiper-button-prev, .s-container .swiper-button-next {
   color: black;
 }
+
 
