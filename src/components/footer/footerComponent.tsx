@@ -1,6 +1,5 @@
 interface Iprops {
   icon: JSX.Element;
-  spanOne: string;
   spanTwo: string;
 }
 
