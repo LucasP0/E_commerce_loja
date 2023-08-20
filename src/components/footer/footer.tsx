@@ -15,8 +15,16 @@ export const Footer = () => {
           />
           <span className='font-semibold text-base '>Amazon</span>
         </div>
-
-
+        <FooterComponent 
+          spanOne={'Local'}
+          icon={<MapPin />}
+          spanTwo={'Sem localização'}
+        />
+        <FooterComponent 
+          spanOne={'Segundo Local'}
+          icon={<MapPin />}
+          spanTwo={'Sem localização 2'}
+        />
       </div>
     </div>
   )
