@@ -4,16 +4,14 @@ interface Iprops {
   spanTwo: string;
 }
 
-export const FooterComponent = ({ icon, spanOne, spanTwo }: Iprops) => {
+export const FooterComponent = ({ icon, spanTwo }: Iprops) => {
   return (
-    <div className='bloc flex flex-col gap-4 max-w-[12rem]'>
       <div className='detail flex flex-col w-inherit text-[0.7rem] gap-4 italic '>
-        <span className="font-medium not-italic text-[1rem]">{spanOne}</span>
-        <span className='pngLinE'>
+        <span className='pngLinE flex gap-4 items-center'>
           {icon}
           <span>{spanTwo}</span>
         </span>
       </div>
-    </div>
+
   )
 }

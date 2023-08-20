@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react'
+import { MapPin, Smartphone } from 'lucide-react'
 import Logo from '../../assets/logo.png'
 import { FooterComponent } from './footerComponent'
 
@@ -15,35 +15,26 @@ export const Footer = () => {
           />
           <span className='font-semibold text-base '>Amazon</span>
         </div>
-        <FooterComponent
-          spanOne={'Localização'}
-          icon={<MapPin />}
-          spanTwo={'Sem localização'}
-        />
-        <FooterComponent
-          spanOne={'Segundo Local'}
-          icon={<MapPin />}
-          spanTwo={'Sem localização 2'}
-        />
-        {/* OU */}
-        <div className='bloc '>
-          <div className='detail'>
-            <span>sem Localização</span>
-            <span className='pngLinE'>
-              <MapPin />
-              <span>Sem localização</span>
-            </span>
-          </div>
+        {/* contat Us */}
+        <div className='bloc flex flex-col gap-4 max-w-[12rem]'>
+          <h1>Contat US</h1>
+          <FooterComponent
+            spanOne='ok'
+            icon={<MapPin />}
+            spanTwo='Loja apenas Online'
+          />
+          <FooterComponent
+            spanOne='ok'
+            icon={<Smartphone />}
+            spanTwo='+55 (91) 98753-0607'
+          />
+          <FooterComponent
+            spanOne='ok'
+            icon={<MapPin />}
+            spanTwo='Loja apenas Online'
+          />
         </div>
-        <div className='bloc '>
-          <div className='detail'>
-            <span>Localização</span>
-            <span className='pngLinE'>
-              <MapPin/>
-              <span>sem localização</span>
-            </span>
-          </div>
-        </div>
+
       </div>
     </div>
   )
