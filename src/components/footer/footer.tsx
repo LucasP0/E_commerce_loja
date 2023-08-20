@@ -15,16 +15,35 @@ export const Footer = () => {
           />
           <span className='font-semibold text-base '>Amazon</span>
         </div>
-        <FooterComponent 
-          spanOne={'Local'}
+        <FooterComponent
+          spanOne={'Localização'}
           icon={<MapPin />}
           spanTwo={'Sem localização'}
         />
-        <FooterComponent 
+        <FooterComponent
           spanOne={'Segundo Local'}
           icon={<MapPin />}
           spanTwo={'Sem localização 2'}
         />
+        {/* OU */}
+        <div className='bloc '>
+          <div className='detail'>
+            <span>sem Localização</span>
+            <span className='pngLinE'>
+              <MapPin />
+              <span>Sem localização</span>
+            </span>
+          </div>
+        </div>
+        <div className='bloc '>
+          <div className='detail'>
+            <span>Localização</span>
+            <span className='pngLinE'>
+              <MapPin/>
+              <span>sem localização</span>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   )
