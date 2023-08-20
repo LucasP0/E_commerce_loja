@@ -4,9 +4,9 @@ import { FooterComponent } from './footerComponent'
 
 export const Footer = () => {
   return (
-    <div className='cFooterWrap w-full mt-20 '>
+    <div className='cFooterWrap w-full mt-20  '>
       <hr className='w-full  border-white mt-4' />
-      <div className='cfooter flex w-full justify-around p-6 '>
+      <div className='cfooter flex flex-row w-full justify-around p-6 '>
         <div className='logo flex items-start gap-4'>
           <img
             src={Logo}
