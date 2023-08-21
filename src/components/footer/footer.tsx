@@ -53,7 +53,7 @@ export const Footer = () => {
           <h1>Recursos</h1>
           <FooterComponent
             icon={<Link />}
-            spanTwo='Sobre Nós'
+            spanTwo='segurança privacidade e termos'
           />
         </div>
       </div>
