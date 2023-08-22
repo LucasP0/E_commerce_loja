@@ -12,11 +12,13 @@ body {
   color: #343434;
   scroll-behavior: smooth;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 856px) {
   body 
   {
     width: 100%;
   }
+  
+
 }
 @media screen and (max-width: 640px) {
   .max-right {
@@ -35,6 +37,8 @@ body {
       display: none;
     }
 }
+
+
 
 
 .s-container .Swiper {
