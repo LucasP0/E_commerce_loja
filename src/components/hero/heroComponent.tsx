@@ -6,7 +6,7 @@ export const HeroComponent = () => {
   const transition = { duration: 3, type: "spring" };
 
   return (
-    <div className="grid grid-cols-ih p-6 mt-10 max-md:grid-  ">
+    <div className="containerHero grid grid-cols-ih p-6 mt-10">
       {/* ********************** Left side**********************  */}
       <div className="grid grid-rows-burro ">
         <span className=" text-[1.8rem] w-min block font-semibold  max-md:text-[1.5rem] max-md:text-justify">Protetor de Pele</span>
@@ -49,12 +49,12 @@ export const HeroComponent = () => {
       </div>
 
       {/* ********************** Right side  ***********************/}
-      <div className="grid grid-flow-row grid-cols-1 ">
-        <div className="flex flex-col text-right ">
+      <div className="grid grid-flow-row grid-cols-1 right">
+        <div className="flex flex-col text-right">
           <span className="font-extrabold text-[1.8rem] max-md:text-[1.5rem]">1.5m</span>
           <span>Tráfego mensal</span>
         </div>
-        <div className="flex flex-col text-right ">
+        <div className="flex flex-col text-right">
           <span className="font-extrabold text-[1.8rem] max-md:text-[1.5rem]">100k</span>
           <span>Clientes Felizes</span>
         </div>

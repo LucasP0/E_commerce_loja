@@ -3,8 +3,7 @@ import logo from '../../assets/logo.png';
 import { useState } from 'react';
 
 export const HeaderComponent = () => {
-  const [showMenu, setShowMenu] = useState
-    (true);
+  const [showMenu, setShowMenu] = useState(true);
   const handleShowMenu = () => {
     setShowMenu((showMenu) => !showMenu)
   }
@@ -21,7 +20,7 @@ export const HeaderComponent = () => {
 
       <div className="max-right flex flex-row gap-4 items-center  ">
         <div className='bars max-sm:block' onClick={handleShowMenu}>
-          <Menu />
+          <Menu className='opacity-0 max-sm:opacity-100' />
         </div>
 
         <ul className='menu flex flex-row gap-4 text-lg font-semibold max-sm:text-center'

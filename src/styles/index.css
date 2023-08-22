@@ -12,14 +12,38 @@ body {
   color: #343434;
   scroll-behavior: smooth;
 }
+
+
+/* RESPONSIVE */
 @media screen and (max-width: 856px) {
   body 
   {
     width: 100%;
   }
-  
-
+  /*********** containerHero ******************* */
+  .containerHero {
+    grid-template-areas:
+      'left center center'
+      'right right right';
+  }  
+  .containerHero>:first-child 
+  {
+    grid-area: left;
+    grid-template-rows: none;
+    gap: 8rem;
+  }
+  .containerHero>:nth-child(2) {
+    grid-area: center;
+  }
+  .containerHero>:nth-child(3) {
+    grid-area: right;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0rem;
+  }
 }
+
+
 @media screen and (max-width: 640px) {
   .max-right {
     top: 1.4rem;
@@ -40,7 +64,7 @@ body {
 
 
 
-
+/* SETINHAS */
 .s-container .Swiper {
   position: unset;
 }
