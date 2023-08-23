@@ -3,7 +3,7 @@
 export const ProductMap = ({ data }: any) => {
   const { name, detail, price, img } = data;
   return (
-    <div className='w-56 h-32 flex flex-row items-center  bg-white rounded-[10px] p-4 overflow-hidden relative '>
+    <div className='w-56 h-32 flex flex-row items-center  bg-white rounded-[10px] p-4 overflow-hidden relative max-md:w-52 '>
       <div className='left-s flex flex-col items-start'>
         <div className='name flex flex-col gap-2'>
           <span className='text-[1rem] font-bold'>{name}</span>

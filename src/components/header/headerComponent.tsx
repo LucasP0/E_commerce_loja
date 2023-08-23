@@ -18,7 +18,7 @@ export const HeaderComponent = () => {
         <span className='font-semibold'>Amazon</span>
       </div>
 
-      <div className="max-right flex flex-row gap-4 items-center  ">
+      <div className="max-right flex flex-row gap-4 items-center ">
         <div className='bars max-sm:block' onClick={handleShowMenu}>
           <Menu className='hidden max-sm:flex' />
         </div>

@@ -18,16 +18,16 @@ export const ProductsComponent = () => {
     SetMenuData(ProductsData.filter((product) => product.type === type))
   }
   return (
-    <div className='p-8 relative flex flex-col gap-8 text-center justify-center '>
+    <div className='p-8 relative flex flex-col gap-8 text-center justify-center gap-4'>
       <img
         src={Plane}
         alt="ImgHeart"
-        className='absolute w-32 left-[32%] top-[-3rem]'
+        className='absolute w-32 left-[32%] top-[-3rem] hidden'
       />
       <h1 className='text-[1.8rem] font-extrabold mb-10'>Seus futuros Produtos</h1>
 
-      <div className='grid w-[90%] grid-cols-2h'>
-        <ul className='menu flex flex-col gap-4 font-medium text-[1.3rem]'>
+      <div className='grid w-[90%] grid-cols-2h max-md:grid-cols-none max-md:gap-4 max-md:w-[100%]'>
+        <ul className='menu flex flex-col gap-4 font-medium text-[1.3rem] max-md:flex-row max-md:justify-center'>
           <li onClick={() => SetMenuData(ProductsData)} className='hover:text-pink-200 cursor-pointer'>
             All
           </li>
@@ -41,7 +41,8 @@ export const ProductsComponent = () => {
             Foundations
           </li>
         </ul>
-        <div className='grid grid-cols-rep h-[25rem]  overflow-y-scroll gap-y-2'ref={parent}>
+        <div className='grid grid-cols-rep h-[25rem]  overflow-y-scroll max-sm:place-items-center 
+        overflow-x-hidden max-md:gap-2 gap-y-2'ref={parent}>
           {
             menuData.map((product, i) => (
               <ProductMap data={product} />

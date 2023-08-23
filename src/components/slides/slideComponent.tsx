@@ -20,9 +20,16 @@ export const SlideComponent = () => {
         spaceBetween={0}
         slidesPerGroup={1}
         loop={true}
-        className="mySwiper w-[75%] h-48"
-      >
-
+        breakpoints={{
+          640: {
+            slidesPerView: 3
+          },
+          0: {
+            slidesPerView: 1
+          },
+        }}
+        className="mySwiper w-[75%] max-sm:left-[-0.5rem] h-48 max-md:w-[90%] max-md:h-40"
+      >   
         {SliderProducts.map((slide, i) => (
           <SwiperSlide className="px-4">
             <SlideMap data={slide} />

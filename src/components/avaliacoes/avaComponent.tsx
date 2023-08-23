@@ -6,8 +6,8 @@ import { Pagination, Navigation  } from "swiper/modules";
 export const AvaComponent = () => {
   return (
     <div className='testimonials flex flex-col justify-center text-center px-4 py-2'>
-      <div className='wrapper grid place-items-end w-full grid-cols-h'>
-        <div className='containe flex flex-col gap-4 text-left '>
+      <div className='wrapper grid place-items-end w-full grid-cols-h max-sm:grid-cols-1'>
+        <div className='containe flex flex-col gap-4 text-left max-sm:text-center'>
           <span className='text-[1.8rem] uppercase block font-bold'>Avaliação</span>
           <span className='text-[0.8rem] uppercase block'>
             Seedly diz que o produto é incrivel e quer comprar de novo!
@@ -17,10 +17,10 @@ export const AvaComponent = () => {
           <img
             src={Hero}
             alt="HeroImg"
-            className='w-[25rem]'
+            className='w-[24rem]'
           />
         </div>
-        <div className='containe flex flex-col gap-4 text-right'>
+        <div className='containe flex flex-col gap-4 text-right max-sm:text-center max-sm:w-full max-sm:mb-10'>
           <span className='text-[1.8rem] uppercase block font-bold'>100k</span>
           <span className='text-[0.8rem] uppercase block'>Clientes felizes conosco </span>
         </div>
@@ -35,6 +35,17 @@ export const AvaComponent = () => {
           loop={true}
           loopFillGroupWithBlank={true}
           navigation={true}
+          breakpoints={{
+            856: {
+              slidesPerView: 3
+            },
+            640: {
+              slidesPerView: 2
+            },
+            0: {
+              slidesPerView: 1
+            }
+          }}
           className='tcarousel p-8  '
         >
           {

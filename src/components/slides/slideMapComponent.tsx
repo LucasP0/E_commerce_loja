@@ -2,8 +2,8 @@
 export const SlideMap = ({ data }: any) => {
   const { name, detail, price, img } = data
   return (
-    <div className="flex  justify-center items-center">
-      <div className="flex flex-row items-center w-[90%] bg-white rounded-[10px] p-4 overflow-hidden relative">
+    <div className="flex  justify-center items-center ">
+      <div className="flex flex-row items-center w-[90%] max-md:w-[100%] bg-white rounded-[10px] p-4 overflow-hidden max-md:h-40 relative">
         <div className="left-s flex flex-col items-start">
           <div className="name flex flex-col gap-4 ">
             <span className="tex-[1.4rem] font-semibold">

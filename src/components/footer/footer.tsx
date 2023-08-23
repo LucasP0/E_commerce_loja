@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <div className='cFooterWrap w-full mt-20  '>
       <hr className='w-full  border-white mt-4' />
-      <div className='cfooter flex flex-row w-full justify-around p-6 '>
+      <div className='cfooter flex flex-row w-full justify-around p-6 max-sm:grid max-sm:grid-cols-2 max-sm:gap-4 max-sm:text-[1.5rem] '>
         <div className='logo flex items-start gap-4'>
           <img
             src={Logo}
