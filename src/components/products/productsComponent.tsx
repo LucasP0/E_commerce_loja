@@ -41,7 +41,7 @@ export const ProductsComponent = () => {
             Foundations
           </li>
         </ul>
-        <div className='grid grid-cols-rep h-[25rem] overflow-scroll gap-y-2'ref={parent}>
+        <div className='grid grid-cols-rep h-[25rem]  overflow-y-scroll gap-y-2'ref={parent}>
           {
             menuData.map((product, i) => (
               <ProductMap data={product} />

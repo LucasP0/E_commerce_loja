@@ -20,7 +20,7 @@ export const HeaderComponent = () => {
 
       <div className="max-right flex flex-row gap-4 items-center  ">
         <div className='bars max-sm:block' onClick={handleShowMenu}>
-          <Menu className='opacity-0 max-sm:opacity-100' />
+          <Menu className='hidden max-sm:flex' />
         </div>
 
         <ul className='menu flex flex-row gap-4 text-lg font-semibold max-sm:text-center'
@@ -34,7 +34,7 @@ export const HeaderComponent = () => {
         <input
           type="search"
           placeholder='Search...'
-          className="search h-[30%] border-2 outline-none max-sm:w-[150px] p-2 border-black max-sm:hidden"
+          className="search h-[30%] border-2 outline-none max-sm:w-[150px] p-2 border-black max-sm:hidden max-md:hidden"
         />
         <ShoppingCart size={30} />
       </div>
