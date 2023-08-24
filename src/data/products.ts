@@ -14,36 +14,42 @@ import img13 from '../assets/img13.png'
 import img14 from '../assets/img14.png'
 
 export const SliderProducts = [{
+    id: 1,
     name: 'SKIN',
     detail: 'Super Skin Care',
     price: '25',
     img: img1
 },
-{
+{   
+    id: 2,
     name: 'SKIN',
     detail: 'Super Skin Care',
     price: '30',
     img: img2
 },
 {
+    id: 3,
     name: 'NATURE',
     detail: 'Super Skin Care',
     price: '25',
     img: img3
 },
 {
+    id: 4,
     name: 'NATURE',
     detail: 'Super Skin Care',
     price: '25',
     img: img3
 },
 {
+    id: 5,
     name: 'NATURE',
     detail: 'Super Skin Care',
     price: '25',
     img: img3
 },
 {
+    id: 6,
     name: 'SKIN',
     detail: 'Super Skin Care',
     price: '25',
@@ -52,6 +58,7 @@ export const SliderProducts = [{
 },
 ]
 export const ProductsData = [{
+    id: 1,
     name: 'SKIN',
     detail: 'Super Skin Care',
     price: '25',
@@ -59,6 +66,7 @@ export const ProductsData = [{
     type: 'skin care',
 },
 {
+    id: 2,
     name: 'SKIN',
     detail: 'Super Skin Care',
     price: '30',
@@ -66,6 +74,7 @@ export const ProductsData = [{
     type: 'skin care',
 },
 {
+    id: 3,
     name: 'NATURE',
     detail: 'Super Skin Care',
     price: '25',
@@ -73,6 +82,7 @@ export const ProductsData = [{
     type: 'skin care',
 },
 {
+    id: 4,
     name: 'Foundation',
     detail: 'Super Skin Care',
     price: '25',
@@ -80,6 +90,7 @@ export const ProductsData = [{
     type: 'foundation',
 },
 {
+    id: 5,
     name: 'CONDITIONER',
     detail: 'Super Skin Care',
     price: '30',
@@ -87,6 +98,7 @@ export const ProductsData = [{
     type: 'conditioner',
 },
 {
+    id: 6,
     name: 'NATURE',
     detail: 'Super Skin Care',
     price: '25',
@@ -94,6 +106,7 @@ export const ProductsData = [{
     type: 'skin care',
 },
 {
+    id: 7,
     name: "CONDITIONER",
     detail: 'Best Conditioner',
     price: '30',
@@ -102,6 +115,7 @@ export const ProductsData = [{
 }
 ,
 {
+    id: 8,
     name: "CONDITIONER",
     detail: 'Best Conditioner',
     price: '30',
@@ -109,6 +123,7 @@ export const ProductsData = [{
     type: 'conditioner'
 },
 {
+    id: 9,
     name: "CONDITIONER",
     detail: 'Best Conditioner',
     price: '30',
@@ -116,6 +131,7 @@ export const ProductsData = [{
     type: 'conditioner'
 },
 {
+    id: 10,
     name: "CONDITIONER",
     detail: 'Best Conditioner',
     price: '30',
@@ -123,6 +139,7 @@ export const ProductsData = [{
     type: 'conditioner'
 },
 {
+    id: 11,
     name: "FOUNDATION",
     detail: 'Nourish your skin',
     price: '12',
@@ -130,6 +147,7 @@ export const ProductsData = [{
     type: 'foundation'
 },
 {
+    id: 12,
     name: "FOUNDATION",
     detail: 'Nourish your skin',
     price: '12',
@@ -137,6 +155,7 @@ export const ProductsData = [{
     type: 'foundation'
 },
 {
+    id: 13,
     name: "FOUNDATION",
     detail: 'Nourish your skin',
     price: '12',
@@ -144,6 +163,7 @@ export const ProductsData = [{
     type: 'foundation'
 },
 {
+    id: 14,
     name: "FOUNDATION",
     detail: 'Nourish your skin',
     price: '12',

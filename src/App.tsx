@@ -5,6 +5,7 @@ import { VirtualComponent } from "./components/virtual/virtualComponent"
 import { Products } from "./components/products/products"
 import { Ava } from "./components/avaliacoes/ava"
 import { Footer } from "./components/footer/footer"
+import { Outlet } from "react-router-dom"
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
       <Products />
       <Ava />
       <Footer />
+      <Outlet />
     </>
     
   )

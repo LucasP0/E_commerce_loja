@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 export const ProductMap = ({ data }: any) => {
-  const { name, detail, price, img } = data;
+  const { name, detail, price, img, id } = data;
   return (
     <div className='w-56 h-32 flex flex-row items-center  bg-white rounded-[10px] p-4 overflow-hidden relative max-md:w-52 '>
       <div className='left-s flex flex-col items-start'>
@@ -17,5 +18,7 @@ export const ProductMap = ({ data }: any) => {
           className='w-24 h-44 top-12 rotate-[-20deg] absolute right-[-20px]  bottom-[-20%] ' />
       </div>
     </div>
+
+
   )
 }

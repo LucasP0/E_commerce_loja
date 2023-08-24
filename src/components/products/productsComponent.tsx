@@ -3,6 +3,7 @@ import Plane from '../../assets/plane.png'
 import { ProductsData } from '../../data/products';
 import { ProductMap } from './productsMapComponent';
 import { useAutoAnimate } from '@formkit/auto-animate/react'
+import { Link } from 'react-router-dom';
 
 
 export const ProductsComponent = () => {
@@ -45,7 +46,10 @@ export const ProductsComponent = () => {
         overflow-x-hidden max-md:gap-2 gap-y-2'ref={parent}>
           {
             menuData.map((product, i) => (
-              <ProductMap data={product} />
+              <Link to={`/pro/${product.id}`}>
+                <ProductMap data={product} />
+              </Link>
+              
             ))
           }
         </div>
