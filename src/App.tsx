@@ -11,13 +11,8 @@ export const App = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <Slide />
-      <VirtualComponent />  
-      <Products />
-      <Ava />
-      <Footer />
       <Outlet />
+      <Footer />
     </>
     
   )

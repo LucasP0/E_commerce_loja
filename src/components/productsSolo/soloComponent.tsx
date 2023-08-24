@@ -15,7 +15,9 @@ export const SoloComoponent = () => {
   return (
     <div>
       {blog ? (
-        <div>{blog.name}</div>
+        <div className="h-screen flex flex-col items-center justify-center">
+          <div className="bg-black">1k</div>
+        </div>
       ) : (
         <h1>Não tem</h1>
       )}

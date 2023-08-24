@@ -43,7 +43,7 @@ export const ProductsComponent = () => {
           </li>
         </ul>
         <div className='grid grid-cols-rep h-[25rem]  overflow-y-scroll max-sm:place-items-center 
-        overflow-x-hidden max-md:gap-2 gap-y-2'ref={parent}>
+        overflow-x-hidden gap-y-2 gap-2'ref={parent}>
           {
             menuData.map((product, i) => (
               <Link to={`/pro/${product.id}`}>
