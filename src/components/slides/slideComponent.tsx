@@ -12,7 +12,8 @@ import { Link } from "react-router-dom";
 
 export const SlideComponent = () => {
   return (
-    <div className="s-container relative">
+    <div className="s-container flex flex-col items-center gap-10 relative" id="destaques">
+      <h1 className="text-[2rem] font-bold">Destaques</h1>
       <Swiper
         modules={[Pagination, Navigation]}
         loopFillGroupWithBlank={true}
@@ -33,6 +34,7 @@ export const SlideComponent = () => {
       >   
         {ProductsData.map((slide, i) => (
           <SwiperSlide className="px-4">
+              
               <SlideMap data={slide} />
           </SwiperSlide>
         ))}

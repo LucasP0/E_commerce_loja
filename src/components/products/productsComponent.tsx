@@ -19,7 +19,7 @@ export const ProductsComponent = () => {
     SetMenuData(ProductsData.filter((product) => product.type === type))
   }
   return (
-    <div className='p-8 relative flex flex-col gap-8 text-center justify-center gap-4'>
+    <div className='p-8 relative flex flex-col gap-8 text-center justify-center gap-4' id='coleções'>
       <img
         src={Plane}
         alt="ImgHeart"
