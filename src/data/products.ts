@@ -13,50 +13,6 @@ import img12 from '../assets/img12.png'
 import img13 from '../assets/img13.png'
 import img14 from '../assets/img14.png'
 
-export const SliderProducts = [{
-    id: 1,
-    name: 'SKIN',
-    detail: 'Super Skin Care',
-    price: '25',
-    img: img1
-},
-{   
-    id: 2,
-    name: 'SKIN',
-    detail: 'Super Skin Care',
-    price: '30',
-    img: img2
-},
-{
-    id: 3,
-    name: 'NATURE',
-    detail: 'Super Skin Care',
-    price: '25',
-    img: img3
-},
-{
-    id: 4,
-    name: 'NATURE',
-    detail: 'Super Skin Care',
-    price: '25',
-    img: img3
-},
-{
-    id: 5,
-    name: 'NATURE',
-    detail: 'Super Skin Care',
-    price: '25',
-    img: img3
-},
-{
-    id: 6,
-    name: 'SKIN',
-    detail: 'Super Skin Care',
-    price: '25',
-    img: img1,
-    type: 'skin care',
-},
-]
 export const ProductsData = [{
     id: 1,
     name: 'SKIN',
@@ -169,6 +125,49 @@ export const ProductsData = [{
     price: '12',
     img: img14,
     type: 'foundation'
-}
+},
+{
+    id: 15,
+    name: 'SKIN',
+    detail: 'Super Skin Care',
+    price: '25',
+    img: img1
+},
+{   
+    id: 16,
+    name: 'SKIN',
+    detail: 'Super Skin Care',
+    price: '30',
+    img: img2
+},
+{
+    id: 17,
+    name: 'NATURE',
+    detail: 'Super Skin Care',
+    price: '25',
+    img: img3
+},
+{
+    id: 18,
+    name: 'NATURE',
+    detail: 'Super Skin Care',
+    price: '25',
+    img: img3
+},
+{
+    id: 19,
+    name: 'NATURE',
+    detail: 'Super Skin Care',
+    price: '25',
+    img: img3
+},
+{
+    id: 20,
+    name: 'SKIN',
+    detail: 'Super Skin Care',
+    price: '25',
+    img: img1,
+    type: 'skin care',
+},
 
 ]

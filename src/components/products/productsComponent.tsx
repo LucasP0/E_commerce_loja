@@ -46,10 +46,7 @@ export const ProductsComponent = () => {
         overflow-x-hidden gap-y-2 gap-2'ref={parent}>
           {
             menuData.map((product, i) => (
-              <Link to={`/pro/${product.id}`}>
-                <ProductMap data={product} />
-              </Link>
-              
+                <ProductMap data={product} />   
             ))
           }
         </div>

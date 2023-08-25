@@ -10,7 +10,10 @@ export const ProductMap = ({ data }: any) => {
           <span className='text-[1rem] font-bold'>{name}</span>
           <span className='text-[0.7rem]'>{detail}</span>
           <span className='text-[1rem] font-bold'>{price}$</span>
-          <div className="text-[0.6rem] border-2 border-black p-2 w-[90px] rounded-[15px] text-center cursor-pointer">Show Now</div>
+          <Link to={`/pro/${id}`}>
+            <div className="text-[0.6rem] border-2 border-black p-2 w-[90px] rounded-[15px] text-center cursor-pointer hover:bg-black hover:text-white">Show Now
+            </div>
+          </Link>
         </div>
         <img
           src={img}
