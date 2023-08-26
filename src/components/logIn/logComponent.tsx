@@ -3,13 +3,7 @@ import { useState } from "react";
 
 export const LogComponent = () => {
   const [input, setInput] = useState('password');
-  const handleChange = () => {
-    if (input === 'password') {
-      setInput('type')
-    } else {
-      setInput('password')
-    }
-  }
+  const handleChange = () => {input === 'password' ? setInput('type') : setInput('password') }
   return (
     <div className="flex items-center justify-center">
       <div 
