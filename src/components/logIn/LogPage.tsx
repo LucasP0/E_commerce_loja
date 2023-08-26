@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 import { Footer } from "../footer/footer"
-import { LogComponent } from "./logComponent"
 import logo from '../../assets/logo.png';
 
-export const Log = () => {
+export const LogPage = () => {
   return (
     <>
     <div>
@@ -16,7 +15,7 @@ export const Log = () => {
         </Link>
       </div>
     </div>
-    <LogComponent />
+    <Outlet />
     <Footer />
     </>
   )

@@ -2,8 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import { App } from "../App";
 import { Solo } from "../components/productsSolo/productsSolo";
 import { PageHome } from "../pages/pageHome";
-import { Log } from "../components/logIn/log";
-import { Virtual } from "../components/virtual/virtual";
+import { LogPage } from "../components/logIn/LogPage";
+import { Forgot } from "../components/logIn/forgot/forgot";
+import { Log } from "../components/logIn/log/log";
 
 export const router = createBrowserRouter([
   {
@@ -23,8 +24,17 @@ export const router = createBrowserRouter([
   },
   {
     path: '/log',
-    element: Log(),
-    children: [],
+    element: LogPage(),
+    children: [
+      {
+        path: '/log',
+        element: Log(),
+      },
+      {
+        path: '/log/forgot',
+        element: Forgot(),
+      }
+    ],
   }
 
 ])

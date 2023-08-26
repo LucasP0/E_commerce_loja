@@ -1,23 +1,24 @@
 import { KeyRound, Mail } from "lucide-react"
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const LogComponent = () => {
   const [input, setInput] = useState('password');
-  const handleChange = () => {input === 'password' ? setInput('type') : setInput('password') }
+  const handleChange = () => { input === 'password' ? setInput('type') : setInput('password') }
   return (
     <div className="flex items-center justify-center">
-      <div 
-      className="bg-white w-[1000px] h-[650px] rounded-md flex flex-col justify-center items-center gap-20">
-        <section className="flex flex-col items-center gap-10 ">
+      <div
+        className="bg-white w-[1000px] h-[650px] rounded-md flex flex-col justify-center items-center gap-20">
+        <section className="flex flex-col items-center  gap-12 ">
           <h1 className="text-[2rem] font-semibold">Login</h1>
-          <div className="flex flex-col items-start w-[300px] gap-2 ">
-            <div className="flex flex-row gap-2 items-center">
+          <div className="flex flex-col items-center  w-[300px] gap-2 ">
+            <div className="flex flex-row gap-2 items-center text-right w-full">
               <Mail size={20} /> E-mail</div>
             <input
               type="e-mail"
               className="w-[300px] border-2 border-blue-800 rounded-md h-10 p-2 outline-none" placeholder="E-mail"
             />
-            <div className="flex flex-row gap-2 items-center">
+            <div className="flex flex-row gap-2 items-center text-right w-full">
               <KeyRound size={20} />
               Senha
             </div>
@@ -26,13 +27,16 @@ export const LogComponent = () => {
                 type={input}
                 className="w-[300px] border-2 border-blue-800 rounded-md h-10 p-2 outline-none" placeholder="Insira sua senha"
               />
-              <h1 onClick={handleChange}>OK</h1>
             </div>
-            <h2 className="text-right w-full text-blue-800 hover:text-gray-600">Esqueci a senha</h2>
+            <button className="w-[250px] h-12 mt-6 border-blue-900 rounded-md hover:bg-black hover:text-white border-2 ">Entrar
+            </button>
+            <Link to={'/log/forgot'} className="w-full">
+              <h2 className="text-right w-full text-blue-800 hover:text-gray-600 mt-2">Esqueci a senha</h2>
+            </Link>
+
             <h2 className="text-right w-full text-blue-800 hover:text-gray-600">Criar Conta</h2>
           </div>
         </section>
-
       </div>
     </div>
   )
