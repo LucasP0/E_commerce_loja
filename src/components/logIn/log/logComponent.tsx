@@ -33,8 +33,10 @@ export const LogComponent = () => {
             <Link to={'/log/forgot'} className="w-full">
               <h2 className="text-right w-full text-blue-800 hover:text-gray-600 mt-2">Esqueci a senha</h2>
             </Link>
-
+            <Link to={'/log/conta'} className="w-full">
             <h2 className="text-right w-full text-blue-800 hover:text-gray-600">Criar Conta</h2>
+            </Link>
+            
           </div>
         </section>
       </div>
