@@ -6,6 +6,9 @@ import { LogPage } from "../components/logIn/LogPage";
 import { Forgot } from "../components/logIn/forgot/forgot";
 import { Log } from "../components/logIn/log/log";
 import { CriarConta } from "../components/logIn/criarConta/CriarConta";
+import { Complited } from "../components/logIn/forgot/completed";
+import { ForgotPage } from "../components/logIn/forgot/forgotPage";
+import { ComplitedPage } from "../components/logIn/forgot/complitedPage";
 
 export const router = createBrowserRouter([
   {
@@ -33,11 +36,16 @@ export const router = createBrowserRouter([
       },
       {
         path: '/log/forgot',
-        element: Forgot(),
+        element: ForgotPage(),
+
       },
       {
         path: '/log/conta',
         element: CriarConta(),
+      },
+      {
+        path: '/log/forgot/completed',
+        element: ComplitedPage(),
       }
     ],
   }
