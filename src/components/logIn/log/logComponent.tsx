@@ -1,13 +1,33 @@
 import { KeyRound, Mail } from "lucide-react"
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 export const LogComponent = () => {
+  const { signin }: any = useAuth();
+  const navigate = useNavigate()
+
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
   const [input, setInput] = useState('password');
   const handleChange = () => { input === 'password' ? setInput('type') : setInput('password') }
+
+  const handleLogin = () => {
+    if (!email || !senha) {
+      setError("Peencha todos os Campos")
+      return;
+    }
+    const res = signin(email, senha);
+
+    if (res) {
+      setError(res);
+      return;
+    }
+    navigate("/log")
+  }
+
+
 
   return (
     <div className="flex items-center justify-center">
@@ -31,18 +51,21 @@ export const LogComponent = () => {
               <input
                 type={input}
                 className="w-[300px] border-2 border-blue-800 rounded-md h-10 p-2 outline-none" placeholder="Insira sua senha"
-                onChange={(e) => [setSenha(e.target.value). setError("")]}
+                onChange={(e) => [setSenha(e.target.value).setError("")]}
               />
+              <span>{error}</span>
             </div>
-            <button className="w-[250px] h-12 mt-6 border-blue-900 rounded-md hover:bg-black hover:text-white border-2 ">Entrar
+            <button
+              onClick={handleLogin}
+              className="w-[250px] h-12 mt-6 border-blue-900 rounded-md hover:bg-black hover:text-white border-2 ">Entrar
             </button>
             <Link to={'/log/forgot'} className="w-full">
               <h2 className="text-right w-full text-blue-800 hover:text-gray-600 mt-2">Esqueci a senha</h2>
             </Link>
             <Link to={'/log/conta'} className="w-full">
-            <h2 className="text-right w-full text-blue-800 hover:text-gray-600">Criar Conta</h2>
+              <h2 className="text-right w-full text-blue-800 hover:text-gray-600">Criar Conta</h2>
             </Link>
-            
+
           </div>
         </section>
       </div>
