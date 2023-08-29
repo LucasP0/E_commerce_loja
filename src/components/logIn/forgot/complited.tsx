@@ -1,4 +1,4 @@
-import { Complited } from "./completed"
+import { Complited } from "./completedComponent"
 
 export const ComplitedPage = () => {
   return <Complited />

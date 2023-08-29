@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom"
-import { Footer } from "../footer/footer"
-import logo from '../../assets/logo.png';
-import { Provider } from "../../context/provider";
+import { Footer } from "../components/footer/footer"
+import logo from '../assets/logo.png';
+import { Provider } from "../context/provider";
 
 export const LogPage = () => {
   return (

@@ -2,13 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import { App } from "../App";
 import { Solo } from "../components/productsSolo/productsSolo";
 import { PageHome } from "../pages/pageHome";
-import { LogPage } from "../components/logIn/LogPage";
-import { Forgot } from "../components/logIn/forgot/forgot";
+import { LogPage } from "../pages/LogPage";
 import { Log } from "../components/logIn/log/log";
 import { CriarConta } from "../components/logIn/criarConta/CriarConta";
-import { Complited } from "../components/logIn/forgot/completed";
-import { ForgotPage } from "../components/logIn/forgot/forgotPage";
-import { ComplitedPage } from "../components/logIn/forgot/complitedPage";
+import { ForgotPage } from "../components/logIn/forgot/forgot";
+import { ComplitedPage } from "../components/logIn/forgot/complited";
 
 export const router = createBrowserRouter([
   {
