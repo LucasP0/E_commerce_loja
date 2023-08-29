@@ -3,8 +3,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const LogComponent = () => {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [error, setError] = useState("");
   const [input, setInput] = useState('password');
   const handleChange = () => { input === 'password' ? setInput('type') : setInput('password') }
+
   return (
     <div className="flex items-center justify-center">
       <div
@@ -17,6 +21,7 @@ export const LogComponent = () => {
             <input
               type="e-mail"
               className="w-[300px] border-2 border-blue-800 rounded-md h-10 p-2 outline-none" placeholder="E-mail"
+              onChange={(e) => [setEmail(e.target.value), setError("")]}
             />
             <div className="flex flex-row gap-2 items-center text-right w-full">
               <KeyRound size={20} />
@@ -26,6 +31,7 @@ export const LogComponent = () => {
               <input
                 type={input}
                 className="w-[300px] border-2 border-blue-800 rounded-md h-10 p-2 outline-none" placeholder="Insira sua senha"
+                onChange={(e) => [setSenha(e.target.value). setError("")]}
               />
             </div>
             <button className="w-[250px] h-12 mt-6 border-blue-900 rounded-md hover:bg-black hover:text-white border-2 ">Entrar
