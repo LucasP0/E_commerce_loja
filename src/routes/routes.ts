@@ -7,7 +7,6 @@ import { Log } from "../components/logIn/log/log";
 import { CriarConta } from "../components/logIn/criarConta/CriarConta";
 import { ForgotPage } from "../components/logIn/forgot/forgot";
 import { ComplitedPage } from "../components/logIn/forgot/complited";
-import useAuth from "../hooks/useAuth";
 
 
 export const router = createBrowserRouter([

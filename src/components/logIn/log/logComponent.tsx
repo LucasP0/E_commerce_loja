@@ -1,17 +1,17 @@
 import { KeyRound, Mail } from "lucide-react"
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { validarEmail, validarSenha } from "../../../utils/validadores";
 
+
 export const LogComponent = () => {
-  const [loading, setLoading] = useState(false);
+   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState<any>([]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       setLoading(true);
-      alert('Login')
       setLoading(false);
     }
     catch (err) {
@@ -19,10 +19,9 @@ export const LogComponent = () => {
     }
   }
 
+
   const handleChange = (event) => {
-    console.log('digitando', event.target.name, event.target.value)
-    setForm({...form, [event.target.name]: event.target.value})
-    console.log('Form', form )
+    setForm({ ...form, [event.target.name]: event.target.value })
   }
 
   const validadorInput = () => {
@@ -54,15 +53,16 @@ export const LogComponent = () => {
             <div className="">
               <input
                 name="password"
-                type="password"
+                type='password'
                 className="w-[300px] border-2 border-blue-800 rounded-md h-10 p-2 outline-none" placeholder="Insira sua senha"
                 onChange={handleChange}
               />
             </div>
             <button
-            type="submit"
-            onClick={handleSubmit}
-              className="w-[250px] h-12 mt-6 border-blue-900 rounded-md hover:bg-black hover:text-white border-2 ">Entrar
+              type="submit"
+              onClick={handleSubmit}
+              disabled={loading === true || !validadorInput()}
+              className={`w-[250px] h-12 mt-6 border-blue-900 rounded-md hover:bg-black hover:text-white border-2 ${validadorInput() === false ? 'hover:bg-gray-500 ' : ''}`}>Entrar
             </button>
             <Link to={'/log/forgot'} className="w-full">
               <h2 className="text-right w-full text-blue-800 hover:text-gray-600 mt-2">Esqueci a senha</h2>
