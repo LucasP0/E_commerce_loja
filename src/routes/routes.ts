@@ -9,10 +9,6 @@ import { ForgotPage } from "../components/logIn/forgot/forgot";
 import { ComplitedPage } from "../components/logIn/forgot/complited";
 import useAuth from "../hooks/useAuth";
 
-const Private = () => {
-  const { signed } = useAuth
-  return signed > 0 ? PageHome() : Log();
-}
 
 export const router = createBrowserRouter([
   {
@@ -35,7 +31,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/log',
-        element: Private(),
+        element: Log(),
       },
       {
         path: '/log/forgot',

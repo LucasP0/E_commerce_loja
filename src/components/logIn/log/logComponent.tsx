@@ -1,32 +1,35 @@
 import { KeyRound, Mail } from "lucide-react"
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
+import { validarEmail, validarSenha } from "../../../utils/validadores";
 
 export const LogComponent = () => {
-  const { signin }: any = useAuth();
-  const navigate = useNavigate()
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState<any>([]);
 
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
-  const [error, setError] = useState("");
-  const [input, setInput] = useState('password');
-  const handleChange = () => { input === 'password' ? setInput('type') : setInput('password') }
-
-  const handleLogin = () => {
-    if (!email || !senha) {
-      setError("Peencha todos os Campos")
-      return;
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      setLoading(true);
+      alert('Login')
+      setLoading(false);
     }
-    const res = signin(email, senha);
-
-    if (res) {
-      setError(res);
-      return;
+    catch (err) {
+      alert('Algo deu errado com o Login' + err)
     }
-    navigate("/log")
   }
 
+  const handleChange = (event) => {
+    console.log('digitando', event.target.name, event.target.value)
+    setForm({...form, [event.target.name]: event.target.value})
+    console.log('Form', form )
+  }
+
+  const validadorInput = () => {
+    return validarEmail(form.email) && validarSenha(form.password);
+  }
+
+  console.log('From está validado?', validadorInput())
 
 
   return (
@@ -39,9 +42,10 @@ export const LogComponent = () => {
             <div className="flex flex-row gap-2 items-center text-right w-full">
               <Mail size={20} /> E-mail</div>
             <input
-              type="e-mail"
+              name="email"
+              type="email"
               className="w-[300px] border-2 border-blue-800 rounded-md h-10 p-2 outline-none" placeholder="E-mail"
-              onChange={(e) => [setEmail(e.target.value), setError("")]}
+              onChange={handleChange}
             />
             <div className="flex flex-row gap-2 items-center text-right w-full">
               <KeyRound size={20} />
@@ -49,14 +53,15 @@ export const LogComponent = () => {
             </div>
             <div className="">
               <input
-                type={input}
+                name="password"
+                type="password"
                 className="w-[300px] border-2 border-blue-800 rounded-md h-10 p-2 outline-none" placeholder="Insira sua senha"
-                onChange={(e) => [setSenha(e.target.value).setError("")]}
+                onChange={handleChange}
               />
-              <span>{error}</span>
             </div>
             <button
-              onClick={handleLogin}
+            type="submit"
+            onClick={handleSubmit}
               className="w-[250px] h-12 mt-6 border-blue-900 rounded-md hover:bg-black hover:text-white border-2 ">Entrar
             </button>
             <Link to={'/log/forgot'} className="w-full">
