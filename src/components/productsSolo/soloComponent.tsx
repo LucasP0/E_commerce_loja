@@ -1,11 +1,22 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable prefer-const */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { ProductsData } from "../../data/products";
 import { Star } from "lucide-react";
 
+interface IBlog {
+  name: string;
+  img: string;
+  blog: any[];
+  detail: string;
+  price: number;
+}
+
 export const SoloComoponent = () => {
-  const { id } = useParams();
-  const [blog, setBlog] = useState();
+  const { id }: any = useParams();
+  const [blog, setBlog] = useState<IBlog>();
   useEffect(() => {
     let blog: any = ProductsData.find((blog) => blog.id === parseInt(id));
     if (blog) {

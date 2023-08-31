@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { AppContext } from "../../../context/AppContext";
 
 export const Complited = () => {
-  const {email, setEmail} = useContext(AppContext)
+  const {email}: any = useContext(AppContext)
   return (
     <div className="flex flex-row items-center justify-center">
       <div className="bg-white w-[1000px] h-[650px] rounded-md flex flex-col justify-center items-center gap-10 ">

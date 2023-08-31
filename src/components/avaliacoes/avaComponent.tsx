@@ -49,7 +49,7 @@ export const AvaComponent = () => {
           className='tcarousel p-8  '
         >
           {
-            TestimonialsData.map((tes, i) => (
+            TestimonialsData.map((tes) => (
               <SwiperSlide>
                 <div className='testimonial flex flex-col relative  items-center justify-center'>
                   <img 

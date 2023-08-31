@@ -3,10 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { ProductsData, SliderProducts } from "../../data/products.js";
+import { ProductsData} from "../../data/products.js";
 import { SlideMap } from "./slideMapComponent.js";
 import { Pagination, Navigation  } from "swiper/modules";
-import { Link } from "react-router-dom";
 
 
 
@@ -32,7 +31,7 @@ export const SlideComponent = () => {
         }}
         className="mySwiper w-[75%] max-sm:left-[-0.5rem] h-48 max-md:w-[90%] max-md:h-40"
       >   
-        {ProductsData.map((slide, i) => (
+        {ProductsData.map((slide) => (
           <SwiperSlide className="px-4">
               
               <SlideMap data={slide} />

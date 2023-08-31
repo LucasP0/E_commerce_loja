@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useState } from "react";
 import { AppContext } from "./AppContext"
 
-export const Provider = ({ children }) => {
+export const Provider = ({ children }: any) => {
   const [email, setEmail] = useState('');
 
-  const value = {
+  const value: any = {
     email,
     setEmail,
-
+    
   }
 
   return (

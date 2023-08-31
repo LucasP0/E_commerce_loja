@@ -1,7 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Link } from "react-router-dom";
 
+interface Iprops {
+  data?: any;
+  name: string;
+  detail: string;
+  price: number;
+  img: string;
+  id: number; 
+}
 
-export const ProductMap = ({ data }: any) => {
+export const ProductMap = ({ data }: Iprops) => {
   const { name, detail, price, img, id } = data;
   return (
     <div className='w-56 h-32 flex flex-row items-center  bg-white rounded-[10px] p-4 overflow-hidden relative max-md:w-52 '>

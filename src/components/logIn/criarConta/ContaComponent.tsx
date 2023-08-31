@@ -1,12 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react"
 import { Dados } from "./dados"
-import { Link, useNavigate } from "react-router-dom"
-import useAuth from "../../../hooks/useAuth"
 
 export const ContaComponent = () => {
-  const [input, setInput] = useState('password')
-  const [input2, setInput2] = useState('password')
-
+  const [input] = useState('password')
   
   return (
     <div className="flex flex-row items-center justify-center">

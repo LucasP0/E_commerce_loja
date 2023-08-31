@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react'
 import Plane from '../../assets/plane.png'
 import { ProductsData } from '../../data/products';
 import { ProductMap } from './productsMapComponent';
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-import { Link } from 'react-router-dom';
 
 
 export const ProductsComponent = () => {
@@ -15,11 +15,11 @@ export const ProductsComponent = () => {
   //   SetMenuData(data);
   // }).catch((error) => console.log(error)
 
-  const filter = (type) => {
+  const filter = (type: any) => {
     SetMenuData(ProductsData.filter((product) => product.type === type))
   }
   return (
-    <div className='p-8 relative flex flex-col gap-8 text-center justify-center gap-4' id='coleções'>
+    <div className='p-8 relative flex flex-col text-center justify-center gap-4' id='coleções'>
       <img
         src={Plane}
         alt="ImgHeart"
@@ -45,8 +45,8 @@ export const ProductsComponent = () => {
         <div className='grid grid-cols-rep h-[25rem]  overflow-y-scroll max-sm:place-items-center 
         overflow-x-hidden gap-y-2 gap-2'ref={parent}>
           {
-            menuData.map((product, i) => (
-                <ProductMap data={product} />   
+            menuData.map((product) => (
+                <ProductMap data={product}  />   
             ))
           }
         </div>
