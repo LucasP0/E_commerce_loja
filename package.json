@@ -13,6 +13,7 @@
     "@formkit/auto-animate": "^0.7.0",
     "axios": "^1.5.0",
     "framer-motion": "^10.16.0",
+    "git-init": "^1.0.0",
     "lucide-react": "^0.265.0",
     "react": "^18.2.0",
     "react-compare-image": "^3.4.0",
