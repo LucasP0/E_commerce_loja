@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AppContext } from "./AppContext"
 
 export const Provider = ({ children }: any) => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState();
 
   const value: any = {
     email,

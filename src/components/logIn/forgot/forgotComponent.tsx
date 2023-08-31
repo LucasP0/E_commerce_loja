@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Link } from "react-router-dom"
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { AppContext } from "../../../context/AppContext";
 
 export const Forgot = () => {
-  const {email, setEmail} = useContext(AppContext)
+  const {setEmail}: any = useContext(AppContext)
   
   return (
     <div className="flex flex-row items-center justify-center">
