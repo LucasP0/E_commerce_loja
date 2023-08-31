@@ -33,7 +33,6 @@ export const AvaComponent = () => {
           slidesPerGroup={1}
           spaceBetween={20}
           loop={true}
-          loopFillGroupWithBlank={true}
           navigation={true}
           breakpoints={{
             856: {

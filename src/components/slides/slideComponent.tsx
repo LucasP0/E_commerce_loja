@@ -15,7 +15,6 @@ export const SlideComponent = () => {
       <h1 className="text-[2rem] font-bold">Destaques</h1>
       <Swiper
         modules={[Pagination, Navigation]}
-        loopFillGroupWithBlank={true}
         navigation={true}
         slidesPerView={3}
         spaceBetween={0}
