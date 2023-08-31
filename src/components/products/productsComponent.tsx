@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Plane from '../../assets/plane.png'
 import { ProductsData } from '../../data/products';
+import { ProductMap } from './productsMapComponent';
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 
@@ -44,8 +45,8 @@ export const ProductsComponent = () => {
         <div className='grid grid-cols-rep h-[25rem]  overflow-y-scroll max-sm:place-items-center 
         overflow-x-hidden gap-y-2 gap-2'ref={parent}>
           {
-            menuData.map(() => (
-                <h1>Ok</h1>  
+            menuData.map((product) => (
+                <ProductMap data={product}  />   
             ))
           }
         </div>
