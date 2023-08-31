@@ -7,7 +7,6 @@ export const App = () => {
     <>
       <Header />
       <Outlet />
-      <h1 className="text-[4rem]">OPA OLHA COMO SOU LINOD</h1>
       <Footer />
     </>
     
