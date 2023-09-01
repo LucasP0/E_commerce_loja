@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Dados } from "./dados"
 
 export const ContaComponent = () => {
-  const [input] = useState('password')
+  const [input, setInput] = useState('password')
   
   return (
     <div className="flex flex-row items-center justify-center">
@@ -14,7 +14,7 @@ export const ContaComponent = () => {
           <Dados  string={'E-mail'} type={'text'} placeholder={'Insira seu E-mail'}  />
 
           <Dados  string={'Senha'} type={input} placeholder={'Insira sua senha'} />
-
+        <h1 onClick={() => input === 'password' ? setInput('type') : setInput('password')}>mudar</h1>
 
           <div className="flex flex-row gap-2 items-center">
             
