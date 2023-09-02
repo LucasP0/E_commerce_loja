@@ -11,7 +11,7 @@ export const HeaderComponent = () => {
 
 
   return (
-    <div className="conta---   p-6 flex flex-row items-center">
+    <div className="conta---   p-6 flex flex-row items-center z-50 relative bg-[#F8E367]">
       <div className="Logo flex flex-row flex-1 items-center gap-2">
         <Link to={'/'} className='flex flex-row items-center gap-2'>
           <img

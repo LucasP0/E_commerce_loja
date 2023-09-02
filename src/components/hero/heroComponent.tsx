@@ -6,7 +6,7 @@ export const HeroComponent = () => {
   const transition = { duration: 3, type: "spring" };
 
   return (
-    <div className="containerHero grid grid-cols-ih p-6 mt-10">
+    <div className="containerHero grid grid-cols-ih p-6 mt-10 z-10">
       {/* ********************** Left side**********************  */}
       <div className="grid grid-rows-burro ">
         <span className=" text-[1.8rem] w-min block font-semibold  max-md:text-[1.5rem] max-md:text-justify">Protetor de Pele</span>
