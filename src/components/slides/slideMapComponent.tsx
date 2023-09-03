@@ -17,7 +17,7 @@ interface Idata {
 
 export const SlideMap = ({ data }: Idata) => {
   const { name, detail, price, img, id } = data
-  const { cartItems, setCartItems } = useContext(AppContext);
+  const { cartItems, setCartItems } = useContext<any>(AppContext);
     const handleClick = () => {
       setCartItems([ ...cartItems, data])
   }
