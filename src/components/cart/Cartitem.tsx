@@ -41,7 +41,7 @@ export const CartItem = ({ data }: Idata) => {
           </h3>
           <h3 className="text-[0.75rem]">{detail}</h3>
           <h3 className="text-[25px] font-bold">
-            R${price}
+            {formatCurrency(price, 'BRL')}
           </h3>
         </div>
         <button

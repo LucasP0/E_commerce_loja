@@ -5,7 +5,17 @@ import { Link } from "react-router-dom"
 import { AppContext } from "../../context/AppContext"
 import formatCurrency from "../cart/formatCurrency"
 
-export const SlideMap = ({ data }: any) => {
+interface Idata {
+  name: string;
+  detail: string;
+  price: number;
+  img: string;
+  id: number,
+  data: any;
+}
+
+
+export const SlideMap = ({ data }: Idata) => {
   const { name, detail, price, img, id } = data
   const { cartItems, setCartItems } = useContext(AppContext);
     const handleClick = () => {
