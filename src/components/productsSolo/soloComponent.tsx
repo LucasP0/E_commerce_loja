@@ -1,10 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable prefer-const */
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { ProductsData } from "../../data/products";
 import { Star } from "lucide-react";
+import { AppContext } from "../../context/AppContext";
 
 interface IBlog {
   name: string;
@@ -23,6 +24,11 @@ export const SoloComoponent = () => {
       setBlog(blog);
     }
   }, [])
+
+  const { cartItems, setCartItems } = useContext<any>(AppContext);
+  const handleClick = () => {
+    setCartItems([ ...cartItems, blog])
+}
 
   return (
     <div>
@@ -58,7 +64,7 @@ export const SoloComoponent = () => {
               <h2 className="text-[2rem] font-bold">{blog.price}$</h2>
               <div className="flex flex-col items-center gap-4 ">
                 <button className="border-2 border-blue-800 w-[250px] h-12 rounded-md hover:bg-black hover:text-white">Comprar</button>
-                <button className="border-2 border-blue-800 w-[250px] h-12 rounded-md hover:bg-black hover:text-white">Ad. Carrinho</button>
+                <button onClick={handleClick} className="border-2 border-blue-800 w-[250px] h-12 rounded-md hover:bg-black hover:text-white">Ad. Carrinho</button>
               </div>
             </section>
           </div>
