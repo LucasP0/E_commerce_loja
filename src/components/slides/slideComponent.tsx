@@ -33,7 +33,6 @@ export const SlideComponent = () => {
       >   
         {ProductsData.map((slide) => (
           <SwiperSlide className="px-4">
-              
               <SlideMap data={slide} />
           </SwiperSlide>
         ))}

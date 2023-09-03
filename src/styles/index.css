@@ -99,5 +99,7 @@ body {
   color: black;
 }
 
-
-
+.cart--active {
+  transform: translate(0,0);
+  display: flex;
+}

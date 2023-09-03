@@ -2,6 +2,7 @@ import { LogIn, Menu, ShoppingCart } from 'lucide-react';
 import logo from '../../assets/logo.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { EmojiCar } from '../cart/emojiCarrinho';
 
 export const HeaderComponent = () => {
   const [showMenu, setShowMenu] = useState(true);
@@ -53,7 +54,7 @@ export const HeaderComponent = () => {
           className="search h-[30%] border-2 outline-none max-sm:w-[150px] p-2 border-black max-sm:hidden max-md:hidden"
         />
 
-        <ShoppingCart size={30} />
+        <EmojiCar />
       </div>
     </div>
   )

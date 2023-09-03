@@ -1,11 +1,25 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { ShoppingCart } from "lucide-react"
+import { useContext } from "react"
 import { Link } from "react-router-dom"
+import { AppContext } from "../../context/AppContext"
+import formatCurrency from "../cart/formatCurrency"
 
 export const SlideMap = ({ data }: any) => {
   const { name, detail, price, img, id } = data
+  const { cartItems, setCartItems } = useContext(AppContext);
+    const handleClick = () => {
+      setCartItems([ ...cartItems, data])
+  }
+
   return (
     <div className="flex  justify-center items-center ">
-      <div className="flex flex-row items-center w-[90%] max-md:w-[100%] bg-white rounded-[10px] p-4 overflow-hidden max-md:h-40 relative">
+      <div className="flex flex-row items-center w-[90%] max-md:w-[100%] bg-white rounded-[10px] p-4 overflow-hidden max-md:h-40 relative group ">
+        <div className='absolute right-2 top-2 w-9 h-9 flex justify-center items-center opacity-0  group-hover:opacity-100 cursor-pointer  '>
+          <ShoppingCart
+            onClick={handleClick}
+          />
+        </div>
         <div className="left-s flex flex-col items-start">
           <div className="name flex flex-col gap-4 ">
             <span className="tex-[1.4rem] font-semibold">
@@ -15,7 +29,7 @@ export const SlideMap = ({ data }: any) => {
               {detail}
             </span>
           </div>
-          <span className="text-[2rem] font-bold">{price}</span>
+          <span className="text-[2rem] font-bold">{formatCurrency(price, 'BRL')}</span>
           <Link to={`/pro/${id}`} className="w-full">
             <div className="text-[0.6rem] border-2 border-black p-2  rounded-[15px] text-center cursor-pointer hover:bg-black hover:text-white">
               Shop now
