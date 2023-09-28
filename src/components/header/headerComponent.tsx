@@ -1,18 +1,19 @@
 import { LogIn, Menu, ShoppingCart } from 'lucide-react';
 import logo from '../../assets/logo.png';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { EmojiCar } from '../cart/emojiCarrinho';
+import { AppContext } from '../../context/AppContext';
 
 export const HeaderComponent = () => {
-  const [showMenu, setShowMenu] = useState(true);
+  const {showMenu, setShowMenu} = useContext<any>(AppContext)
   const handleShowMenu = () => {
     setShowMenu((showMenu) => !showMenu)
   }
 
 
   return (
-      <div className="fixed conta---   p-6 flex flex-row items-center top-0 z-50 bg-[#F8E367] w-full">
+      <div className="fixed  p-6 flex flex-row items-center top-0 z-50 bg-white w-full max-sm:relative">
         <div className="Logo flex flex-row flex-1 items-center gap-2">
           <Link to={'/'} className='flex flex-row items-center gap-2'>
             <img
@@ -21,19 +22,19 @@ export const HeaderComponent = () => {
             <span className='font-semibold'>Amazon</span>
           </Link>
         </div>
-        <div className="max-right flex flex-row gap-4 items-center ">
+        <div style={{left: showMenu ? '' : '19rem'}} className="max-right flex flex-row gap-4 items-center max-sm:fixed  bg-black w-fit">
           <div className='bars max-sm:block' onClick={handleShowMenu}>
             <Menu className='hidden max-sm:flex' />
           </div>
           <ul className='menu flex flex-row gap-4 text-lg font-semibold max-sm:text-center'
             style={{ display: showMenu ? 'inherit' : 'none' }}>
-            <a href="#coleções" className='hover:text-white'>
+            <a href="#coleções" className='hover:text-white max-sm:hover:text-black'>
               <li>Coleções</li>
             </a>
-            <a href="#destaques" className='hover:text-white'>
+            <a href="#destaques" className='hover:text-white max-sm:hover:text-black'>
               <li>Destaques</li>
             </a>
-            <a href="#virtual" className='hover:text-white'>
+            <a href="#virtual" className='hover:text-white max-sm:hover:text-black'>
               <li>Virtual</li>
             </a>
           </ul>

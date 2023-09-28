@@ -27,29 +27,29 @@ export const SoloComoponent = () => {
 
   const { cartItems, setCartItems } = useContext<any>(AppContext);
   const handleClick = () => {
-    setCartItems([ ...cartItems, blog])
-}
+    setCartItems([...cartItems, blog])
+  }
 
   return (
     <div>
       {blog ? (
-        <div className="h-screen flex flex-col items-center justify-start mt-20">
-          <div className="bg-white w-[1250px] h-[800px] flex flex-row items-center rounded-md p-6">
+        <div className="h-screen flex flex-col items-center justify-start mt-20 max-sm:mt-0 max-sm:border-t-[2px] max-sm:w-full  ">
+          <div className="bg-white w-[1250px] max-sm:w-full h-[800px] max-h-screen flex flex-row items-center rounded-md p-6 max-sm:flex-col max-sm:gap-6 ">
             <section className="flex flex-col gap-6 items-center w-full  ">
               <img
                 src={blog.img}
                 alt=""
                 width={140}
-                className="border-black/70 hover:scale-150 hover:rotate-2"
-                />
-              <div className="flex flex-row gap-16">
-                <img src={blog.img} alt="" width={80} className="hover:scale-150 hover:rotate-2"/>
-                <img src={blog.img} alt="" width={80} className="hover:scale-150 hover:rotate-2"/>
-                <img src={blog.img} alt="" width={80} className="hover:scale-150 hover:rotate-2"/>
+                className="max-sm:w-14 border-black/70 hover:scale-150 hover:rotate-2"
+              />
+              <div className="flex flex-row gap-16 ">
+                <img src={blog.img} alt="" width={80} className="max-sm:w-9 hover:scale-150 hover:rotate-2" />
+                <img src={blog.img} alt="" width={80} className="max-sm:w-9 hover:scale-150 hover:rotate-2" />
+                <img src={blog.img} alt="" width={80} className="max-sm:w-9 hover:scale-150 hover:rotate-2" />
               </div>
-              
             </section>
-            <section className=" w-full flex flex-col gap-6 items-center border-2 border-black h-[600px] justify-center rounded-md ">
+
+            <section className=" w-full flex flex-col gap-6 items-center border-2 border-black h-[600px] max-sm:border-0 max-sm:border-t-[1px] max-sm:rounded-none max-sm:w-[350px] justify-center rounded-md max-sm:border-[#9c9c9c] ">
               <div className="flex flex-col items-center">
                 <h1 className="text-[2.7rem] font-bold">{blog.name}</h1>
                 <p>{blog.detail}</p>

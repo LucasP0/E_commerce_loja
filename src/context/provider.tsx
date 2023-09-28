@@ -6,6 +6,7 @@ export const Provider = ({ children }: any) => {
   const [cartItems, setCartItems] = useState([]);
   const [email, setEmail] = useState();
   const [isCartVisible, setIsCartVisible] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
 
   const value: any = {
     email,
@@ -13,7 +14,9 @@ export const Provider = ({ children }: any) => {
     cartItems,
     setCartItems,
     isCartVisible,
-    setIsCartVisible
+    setIsCartVisible,
+    showMenu,
+    setShowMenu
   }
 
   return (

@@ -28,6 +28,7 @@ export const CartItem = ({ data }: Idata) => {
 
   return (
     <section className="flex flex-row items-center border-b-2 pb-5 mb-5 gap-2 last:border-0">
+
       <img
         className="w-10"
         src={img}
