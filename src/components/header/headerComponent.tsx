@@ -1,6 +1,6 @@
-import { LogIn, Menu, ShoppingCart } from 'lucide-react';
+import { LogIn, Menu} from 'lucide-react';
 import logo from '../../assets/logo.png';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { EmojiCar } from '../cart/emojiCarrinho';
 import { AppContext } from '../../context/AppContext';
@@ -13,7 +13,7 @@ export const HeaderComponent = () => {
 
 
   return (
-      <div className="fixed  p-6 flex flex-row items-center top-0 z-50 bg-white w-full max-sm:relative">
+      <div className="fixed  p-6 flex flex-row items-center top-0 z-50  w-full max-sm:relative">
         <div className="Logo flex flex-row flex-1 items-center gap-2">
           <Link to={'/'} className='flex flex-row items-center gap-2'>
             <img
@@ -22,7 +22,7 @@ export const HeaderComponent = () => {
             <span className='font-semibold'>Amazon</span>
           </Link>
         </div>
-        <div style={{left: showMenu ? '' : '19rem'}} className="max-right flex flex-row gap-4 items-center max-sm:fixed  bg-black w-fit">
+        <div style={{left: showMenu ? '' : '19rem'}} className="max-right flex flex-row gap-4 items-center max-sm:fixed w-fit">
           <div className='bars max-sm:block' onClick={handleShowMenu}>
             <Menu className='hidden max-sm:flex' />
           </div>
