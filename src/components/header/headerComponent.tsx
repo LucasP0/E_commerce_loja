@@ -8,7 +8,7 @@ import { AppContext } from '../../context/AppContext';
 export const HeaderComponent = () => {
   const {showMenu, setShowMenu} = useContext<any>(AppContext)
   const handleShowMenu = () => {
-    setShowMenu((showMenu) => !showMenu)
+    setShowMenu((showMenu : any) => !showMenu)
   }
 
 
