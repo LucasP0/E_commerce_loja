@@ -22,7 +22,7 @@ export const HeaderComponent = () => {
             <span className='font-semibold'>Amazon</span>
           </Link>
         </div>
-        <div style={{left: showMenu ? '' : '19rem'}} className="max-right flex flex-row gap-4 items-center max-sm:fixed w-fit">
+        <div style={{left: showMenu ? '' : '9rem'}} className="max-right flex flex-row gap-4 items-center max-sm:fixed w-fit">
           <div className='bars max-sm:block' onClick={handleShowMenu}>
             <Menu className='hidden max-sm:flex' />
           </div>
